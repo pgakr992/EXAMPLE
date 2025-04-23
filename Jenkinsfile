@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        EC2_HOST = "ec2-user@<EC2_PUBLIC_IP>"
-        PEM_FILE = "my-key.pem"  // Jenkins should have access to this file
+        EC2_HOST = "Demo@13.52.221.190>"
+        PEM_FILE = "Demo-key.pem"  // Jenkins should have access to this file
     }
 
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/pgakr992/EXAMPLE.git'
             }
         }
 
